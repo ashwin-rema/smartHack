@@ -39,14 +39,222 @@
     </style>
   </head>
   <body>
-    <div id="message">
+    <!--<div id="message">
       <h2>Welcome</h2>
       <h1>Firebase Hosting Setup Complete</h1>
       <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
       <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <p id="load">Firebase SDK Loading&hellip;</p>-->
+    <input type="checkbox" name="" id="menu-toggle">
+    <div class="overlay"><label for="menu-toggle">
+      </label></div>
+    <div class="sidebar">
+      <div class="sidebar-container">
+        <div class="brand">
+          <h3>
+            <span class="lab la-staylinked"></span>
+           
+          </h3>
+        </div>
+        <div class="sidebar-avatar">
+          <div>
+            <img src="data:image/jpeg;base64,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" >
+          </div>
+          <div class="avatar-info">
+            <div class="avatar-text">
+              <!--<h4>maz develop</h4>
+              <small>14-10-69</small>-->
+            </div>
+            <span class="las la-angle-double-down"></span>
+          </div>
+        </div>
+        <div class="sidebar-menu">
+          <ul>
+            <li><a href="#" class="active"><span class="las la-adjust"></span><span>Dashboard</span></a></li>
+            <!--<li><a href="#"><span class="las la-video"></span><span>Videos</span></a></li>
+            <li><a href="#"><span class="las la-chart-bar"></span><span>Analytics</span></a></li>
+            <li><a href="#"><span class="las la-calendar"></span><span>Schedule</span></a></li>
+            <li><a href="#"><span class="las la-user"></span><span>Account</span></a></li>-->
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <div class="side-card-icon">
+            <span class="lab la-codiepie"></span>
+          </div>
+          <div>
+            <!--<h4>Make AdSense</h4>
+            <p>add ads to your videos to earn money</p>-->
+          </div>
+          <!--<button class="btn btn-main btn-block">Create now</button>-->
+          <p> Solution to pollution</p>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <header>
+        <div class="header-wrapper">
+          <label for="menu-toggle">
+            <span class="las la-bars"></span>
+          </label>
+          <div class="header-title">
+            <h1> SmartIndiaHackathon</h1>
+            <p>Pollution monitor sensor <span class="las la-chart-line"></span></p>
+          </div>
+        </div>
+        <div class="header-action">
+          <!--<button class="btn btn-main">
+            <span class="las la-video"></span>
+            Upload
+          </button>-->
+        </div>
+      </header>
+      <main>
+        <section>
+          <h3 class="section-head">Overview</h3>
+          <div class="analytics">
+            <div class="analytic">
+              <div class="analytic-icon"><span class="las la-eye"></span></div>
+              <div class="analytic-info">
+                <h4>Pollution</h4>
+                <h1>30%</h1>
+              </div>
+            </div>
+            <div class="analytic">
+              <div class="analytic-icon"><span class="las la-clock"></span></div>
+              <div class="analytic-info">
+                <h4>Precipitation</h4>
+                <h1>10% <small class="text-danger">5%</small></h1>
+              </div>
+            </div>
+            <div class="analytic">
+              <div class="analytic-icon"><span class="las la-users"></span></div>
+              <div class="analytic-info">
+                <h4>Humidity</h4>
+                <h1>100 <small class="text-success">12%</small></h1>
+              </div>
+            </div>
+            <div class="analytic">
+              <div class="analytic-icon"><span class="las la-heart"></span></div>
+              <div class="analytic-info">
+                <h4>PPI</h4>
+                <h1>3.4M </h1>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="block-grid">
+            <div class="revenue-card">
+              <h3 class="section-head">Analysis</h3>
+              <div class="rev-content">
+                <img src="data:image/png;base64,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" alt="">
+                <div class="rev-info">
+                  <!--<h3>Mohsen Alizade</h3>
+                  <h1>3.5M <small>Subscribers</small></h1>
+                </div>
+                <div class="rev-sum">
+                  <h4>Total income</h4>
+                  <h2>$70.859</h2>-->
+                </div>
+              </div>
+            </div>
+            <div class="graph-card">
+              <h3 class="section-head">Graph</h3>
+              <div class="graph-content">
+                <div class="graph-head">
+                  <div class="icon-wrapper">
+                    <!--<div class="icon"><span class="las la-eye text-main"></span></div>
+                    <div class="icon"><span class="las la-clock text-success"></span></div>-->
+                  </div>
+                  <div class="graph-select">
+                   <!--<select name="" id="">
+                      <option value="">Septamber</option>-->
+                    </select>
+                  </div>
+                </div>
+                <div class="graph-board">
+                  <canvas id="revenueChart" width="100%"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    </body>
 
+    <script>
+      Chart.defaults.global.defaultFontFamily = "Poppins";
+  let ctx = document.querySelector("#revenueChart");
+  ctx.height = 53;
+  
+  let revChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: [
+        "Sept 1",
+        "Sept 3",
+        "Sept 6",
+        "Sept 9",
+        "Sept 12",
+        "Sept 15",
+        "Sept 18",
+        "Sept 21",
+        "Sept 24",
+        "Sept 27",
+        "Sept 30"
+      ],
+      datasets: [
+        {
+          label: "Views",
+          borderColor: "green",
+          backgroundColor: "rgba(235, 247, 245, 0.5)",
+          data: [0, 30, 60, 25, 60, 25, 50, 10, 50, 90, 120]
+        },
+        {
+          label: "Watch time",
+          borderColor: "blue",
+          backgroundColor: "rgba(233, 238, 253, 0.5)",
+          data: [0, 60, 25, 100, 20, 75, 30, 55, 20, 60, 20]
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      tooltips: {
+        intersect: false,
+        node: "index"
+      }
+    }
+  });
+  
+  </script>
+  <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyB5QYa5-zYxCD2r9KcnYcM4sOn3xf27Tew",
+        authDomain: "smarthack-b1c2b.firebaseapp.com",
+        projectId: "smarthack-b1c2b",
+        storageBucket: "smarthack-b1c2b.appspot.com",
+        messagingSenderId: "872732421381",
+        appId: "1:872732421381:web:2cddaef6463228ac039b6c",
+        measurementId: "G-P487X6BYWY"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const database = getDatabase(app);
+    </script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
